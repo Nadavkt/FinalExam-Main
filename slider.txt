@@ -1,0 +1,64 @@
+************ A METTRE DANS LE HTML ************
+
+<slider data-anim="1"><input type="hidden" id="pos" value="0" />
+        <slidein><slidect>
+		
+            <scell><in class="center">
+                <span class="txt">
+                    CECI
+                    <nav>
+                        <a href="#" class="cta"><lab>Buy this !</lab></a>
+                    </nav>
+                </span>
+                <span></span>
+            </in></scell>
+			
+            <scell><in class="center">
+                <span class="txt">
+                    CELA
+                    <nav>
+                        <a href="#" class="cta"><lab>Buy this !</lab></a>
+                    </nav>
+                </span>
+                <span></span>
+            </in></scell>
+
+
+        </slidect></slidein>
+        <onglets class="center">
+			<a href="javascript:" onClick="slide({ pos: 0, elem: this });" class="in">opt1</a>
+			<a href="javascript:" onClick="slide({ pos: 1, elem: this });">opt2</a>
+            <a href="javascript:" onClick="slide({ pos: 2, elem: this });">opt3</a -->
+
+                <a href="javascript:" onClick="slide({ pos: 1, elem: this });" class="{tab:d|class}"></a>
+
+		</onglets>
+</slider>
+
+
+************ A METTRE DANS LE CSS ************
+
+slider{ display: flex; flex: none; flex-direction: column; align-items: stretch; width: 100%; height: 100%; overflow: hidden; }
+slider slidein{ display: flex; flex: 1;  }
+slider in{ display: flex; flex: none; align-items: center; height: 100%; }
+slider in.space-around{ justify-content: space-around; }
+slider in.center{ justify-content: center; }
+slider onglets{ display: flex; flex: none; align-items: stretch; margin-bottom: -1px; padding: 0.5em 0; font-size: 0.5vw; }
+slider onglets.center{ justify-content: center; }
+slider onglets a{ 
+	display: inline-flex; flex: none; justify-content: center; align-items: center; width: 1.5em; height: 1.5em; margin: 0.5em;
+	text-decoration: none; border: 1px solid #000; border-radius: 100%; background: #333; color: #fff;
+}
+slider onglets a.in{ background: #444; }
+slider slidect{ display: flex; flex: none; align-items: stretch; opacity: 0; }
+slider slidect scell{ width: 100%; overflow: hidden; }
+
+@media (max-device-aspect-ratio: 13/9), (max-aspect-ratio: 13/9){ /*landscape*/
+
+	slider onglets{ font-size: 3.5vw; }
+	slider onglets a{ padding: 0.5vh 2vw; }
+
+}
+
+
+
